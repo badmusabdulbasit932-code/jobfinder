@@ -58,23 +58,23 @@ export default function Footer() {
         >
           <div>
             <h4>Company</h4>
-            <a href="#">About</a>
-            <a href="#">Careers</a>
-            <a href="#">Contact</a>
+            <a href="/">About</a>
+            <a href="/">Careers</a>
+            <a href="/">Contact</a>
           </div>
 
           <div>
             <h4>Support</h4>
-            <a href="#">Help Center</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Privacy Policy</a>
+            <a href="/">Help Center</a>
+            <a href="/">Terms of Service</a>
+            <a href="/">Privacy Policy</a>
           </div>
 
           <div>
             <h4>Resources</h4>
-            <a href="#">Blog</a>
-            <a href="#">Guides</a>
-            <a href="#">Community</a>
+            <a href="/">Blog</a>
+            <a href="/">Guides</a>
+            <a href="/">Community</a>
           </div>
         </motion.div>
 
@@ -91,15 +91,15 @@ export default function Footer() {
         <p>© 2026 JobFinder. All rights reserved.</p>
 
         <nav>
-          <a href="#">
+          <a href="/">
             <CiMail />
             info@jobfinder.com
           </a>
-          <a href="#">
+          <a href="/">
             <LuPhone />
             +2348154273894
           </a>
-          <a href="#">
+          <a href="/">
             <CiLocationOn />
             New York, NY
           </a>
