@@ -1,0 +1,192 @@
+.footer {
+  margin-top: 6rem;
+  background: #f3f4f6;
+  border-top: 1px solid #dee1e6;
+  padding: 64px clamp(20px, 8vw, 100px) 40px;
+}
+
+/* ================= TOP ================= */
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: clamp(24px, 5vw, 48px);
+  flex-wrap: wrap;
+}
+
+/* ================= BRAND ================= */
+
+.footer-brand {
+  max-width: 320px;
+  flex: 1 1 260px;
+}
+
+.footer-brand h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #6366f1;
+}
+
+.footer-brand .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #6366f1;
+  border-radius: 6px;
+  padding: 2px 6px;
+}
+
+.footer-brand p {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #565d6d;
+  line-height: 1.6;
+}
+
+.footer-brand nav {
+  margin-top: 20px;
+  display: flex;
+  gap: 14px;
+}
+
+.footer-brand nav svg {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  color: #565d6d;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-brand nav svg:hover {
+  color: #6366f1;
+  transform: translateY(-2px);
+}
+
+/* ================= LINKS ================= */
+
+.footer-links {
+  display: flex;
+  gap: clamp(24px, 6vw, 64px);
+  flex: 2 1 420px;
+  flex-wrap: wrap;
+}
+
+.footer-links div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 120px;
+}
+
+.footer-links h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  font-size: 14px;
+  color: #565d6d;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #6366f1;
+}
+
+/* ================= BOTTOM ================= */
+
+.footer-bottom {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #dee1e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  color: #565d6d;
+}
+
+.footer-bottom nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom nav a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #565d6d;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom nav a:hover {
+  color: #6366f1;
+}
+
+.footer-bottom .icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* ================================================= */
+/* ================= RESPONSIVE ==================== */
+/* ================================================= */
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 56px 32px 36px;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer {
+    padding: 48px 24px 32px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer-links {
+    gap: 28px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-brand h2 {
+    font-size: 16px;
+  }
+
+  .footer-links h4 {
+    font-size: 13px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+  }
+
+  .footer-bottom nav {
+    justify-content: center;
+  }
+}

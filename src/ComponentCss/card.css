@@ -1,0 +1,198 @@
+/* ================= SECTION ================= */
+
+.jobs {
+  margin-top: 96px;
+  padding: 0 clamp(20px, 8vw, 112px);
+}
+
+.jobs h2 {
+  font-family: Archivo, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #171a1f;
+  margin-bottom: 32px;
+}
+
+/* ================= GRID ================= */
+
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .job-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .jobs {
+    margin-top: 72px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+  .job-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .jobs h2 {
+    font-size: 24px;
+  }
+}
+
+/* SMALL PHONES */
+@media (max-width: 420px) {
+  .jobs {
+    padding: 0 20px;
+  }
+}
+
+/* ================= CARD ================= */
+
+.job-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #dee1e6;
+  box-shadow: 0 0 2px rgba(23,26,31,0.12),
+              0 2px 5px rgba(23,26,31,0.09);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px;
+
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(23,26,31,0.12);
+}
+
+/* ================= TOP ================= */
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.title h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.company {
+  font-size: 13px;
+  color: #565d6d;
+  margin-top: 4px;
+}
+
+/* ================= HEART ================= */
+
+.heart {
+  font-size: 20px;
+  cursor: pointer;
+  color: #9ca3af;
+  flex-shrink: 0;
+  transition: .2s;
+}
+
+.heart.active {
+  color: #ef4444;
+}
+
+/* ================= META ROW ================= */
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #565d6d;
+  flex-wrap: wrap; /* prevents overflow on small screens */
+}
+
+.salary {
+  font-size: 14px;
+  font-weight: 600;
+  color: #636ae8;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.description {
+  font-size: 13px;
+  color: #565d6d;
+  line-height: 1.5;
+  margin-top: 6px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ================= BUTTON ================= */
+
+.details-btn {
+  height: 38px;
+  border-radius: 6px;
+  border: none;
+  background: #636ae8;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 12px;
+  width: 100%;
+  transition: .2s;
+}
+
+.details-btn:hover {
+  opacity: 0.9;
+}
+
+/* ================= VIEW ALL ================= */
+
+.view-all {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.view-all button {
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  background: transparent;
+  border: 2px solid #636ae8;
+  color: #636ae8;
+  cursor: pointer;
+  transition: .2s;
+}
+
+/* ================= EXTRA MOBILE POLISH ================= */
+
+@media (max-width: 480px) {
+  .job-card {
+    padding: 16px;
+    min-height: auto; /* prevents tall cards on small phones */
+  }
+
+  .title h3 {
+    font-size: 15px;
+  }
+
+  .details-btn {
+    height: 36px;
+    font-size: 13px;
+  }
+}

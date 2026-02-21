@@ -1,0 +1,213 @@
+.post-job-page {
+  /* min-height: 100vh; */
+  /* background: #f9fafb; */
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.post-job-card {
+  /* width: 896px; */
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 32px;
+  border: 1px solid #dee1e6ff;
+  box-shadow: 0px 0px 2px #171a1f1f, 0px 2px 5px #171a1f17;
+
+  h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #171A1FFF;
+    margin-bottom: 6px;
+    font-family: Archivo;
+
+  }
+
+  .subtitle {
+    font-family: Inter;
+    font-size: 14px;
+    color: #565D6DFF;
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+
+  h3 {
+    font-family: Archivo;
+    font-size: 24px;
+    font-weight: 600;
+    color: #171A1FFF;
+    margin: 24px 0 12px;
+  }
+}
+
+/* ================= FORM LAYOUT ================= */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.form-column,.label {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+label,.label label {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 6px;
+}
+input,
+select{
+  border: 1px solid #DEE1E6FF;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  outline: none;
+  font-family: Inter;
+  transition: 0.2s ease;
+  background: #ffffff;
+  width: 380px;
+  height: 49px;
+  &:focus {
+    color: #565D6DFF;
+    background: #FFFFFFFF;
+    border-color: #DEE1E6FF;
+  }
+  &:hover{
+    color: #565D6DFF;
+    background: #FFFFFFFF;
+    border-color: #DEE1E6FF;
+  }
+  &::placeholder {
+    color: #9ca3af;
+  }
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+  color: #565D6DFF;
+  width: 784px;
+  height: 97px;
+  padding:7px 12px ;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  color: #565D6DFF;
+  background: #FFFFFFFF;
+  border-radius: 6px;
+  border: 1px solid #DEE1E6FF;
+  &:hover{
+    background: #FFFFFFFF;
+    border-color: #DEE1E6FF;
+  }
+  &:focused{
+    background: #FFFFFFFF;
+    border-color: #DEE1E6FF;
+    box-shadow: 0px 0px 5px #dee1e633;
+  }
+}
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+
+  button {
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: Inter;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+  }
+
+  .preview-btn {
+    background: #f3f4f6;
+    color: #111827;
+    border: 1px solid #dee1e6ff;
+
+    &:hover {
+      background: #e5e7eb;
+    }
+  }
+
+  .post-btn {
+    background: #6366f1;
+    color: #ffffff;
+
+    &:hover {
+      background: #4f46e5;
+    }
+  }
+}
+/* ================= FIX OVERFLOW + CENTER INPUTS ================= */
+
+/* Tablet & Mobile */
+@media (max-width: 900px) {
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CENTER ALL INPUT CONTAINERS */
+  .form-column,
+  .label {
+    align-items: center;
+  }
+
+  .form-column div,
+  .label div {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  /* 🔥 OVERRIDE FIXED WIDTHS (THIS IS THE MAIN FIX) */
+  .post-job-card input,
+  .post-job-card select,
+  .post-job-card textarea {
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box; /* prevents overflow */
+  }
+
+  .form-actions {
+    justify-content: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  .post-job-card input,
+  .post-job-card select,
+  .post-job-card textarea {
+    max-width: 320px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-actions button {
+    width: 100%;
+    max-width: 320px;
+  }
+}

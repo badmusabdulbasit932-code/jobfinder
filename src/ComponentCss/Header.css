@@ -1,0 +1,178 @@
+.main-div {
+  padding: 16px clamp(20px, 8vw, 112px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+/* ================= CHILD ================= */
+.main-div .child {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+/* ================= LOGO ================= */
+.main-div nav:first-child h1 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #636ae8;
+}
+
+.main-div nav:first-child h1 .brief {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #636ae8;
+  background: #fff;
+  padding: 2px 4px;
+  border-radius: 5px;
+  border: 2px solid #636ae8;
+}
+
+/* ================= MENU ================= */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-menu a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #565d6d;
+  transition: 0.2s ease;
+}
+
+.nav-menu a:hover {
+  color: #636ae8;
+}
+
+.nav-menu a.active {
+  color: #636ae8;
+  font-weight: 600;
+}
+
+/* ================= SIGN BUTTON ================= */
+.main-div .sign {
+  text-decoration: none;
+}
+
+.main-div .sign button {
+  width: 78px;
+  height: 40px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 600;
+  background: transparent;
+  border: 2px solid #636ae8;
+  color: #636ae8;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.main-div .sign button:hover {
+  background: #636ae8;
+  color: #fff;
+}
+
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #636ae8;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* ================================================= */
+/* ================= RESPONSIVE ==================== */
+/* ================================================= */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .main-div .child {
+    gap: 28px;
+  }
+
+  .nav-menu {
+    gap: 18px;
+  }
+}
+
+/* SMALL TABLET */
+@media (max-width: 900px) {
+  .main-div {
+    padding: 14px 24px;
+  }
+
+  .main-div nav:first-child h1 {
+    font-size: 18px;
+  }
+
+  .nav-menu a {
+    font-size: 13px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide normal horizontal menu */
+  .nav-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+    display: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  }
+
+  /* Show menu when active */
+  .nav-menu.active {
+    display: flex;
+  }
+}
+
+/* EXTRA SMALL PHONES */
+@media (max-width: 420px) {
+
+  .main-div nav:first-child h1 {
+    font-size: 16px;
+  }
+
+  .nav-menu a {
+    font-size: 12px;
+  }
+}
