@@ -15,13 +15,18 @@ export default function AllJobs({
   const [apiJobs, setApiJobs] = useState([]);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+  window.scrollTo(0, 0);
 
-    fetch("https://corsproxy.io/?https://remotive.com/api/remote-jobs")
-      .then(res => res.json())
-      .then(data => setApiJobs(data.jobs || []))
-      .catch(console.error);
-  }, []);
+  fetch("https://remotive.com/api/remote-jobs")
+    .then(res => res.json())
+    .then(data => {
+      console.log("API Jobs:", data);
+      setApiJobs(data.jobs || []);
+    })
+    .catch(err => {
+      console.error("API Error:", err);
+    });
+}, []);
 
   const staticJobs = [
     {
