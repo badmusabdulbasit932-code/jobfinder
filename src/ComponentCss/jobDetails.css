@@ -309,3 +309,96 @@
   height: 14px;
   color: #565d6d;
 }
+/* ================= RESPONSIVENESS ================= */
+
+/* ===== Tablets (1024px and below) ===== */
+@media (max-width: 1024px) {
+  .job-details-container {
+    flex-direction: column;
+  }
+
+  .job-left,
+  .job-right {
+    flex: 100%;
+  }
+
+  .job-right {
+    min-width: 100%;
+  }
+}
+
+/* ===== Small Tablets / Large Phones (768px and below) ===== */
+@media (max-width: 768px) {
+  .job-details-page {
+    padding: 30px 20px;
+  }
+
+  .job-title {
+    font-size: 22px;
+  }
+
+  .job-header-card {
+    padding: 20px;
+  }
+
+  .company-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .company-info .company-meta {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .job-actions {
+    flex-wrap: wrap;
+  }
+
+  .job-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .job-description h3,
+  .job-requirements h3,
+  .job-right h3 {
+    font-size: 20px;
+  }
+}
+
+/* ===== Mobile Phones (480px and below) ===== */
+@media (max-width: 480px) {
+  .job-details-page {
+    padding: 20px 16px;
+  }
+
+  .job-title {
+    font-size: 20px;
+  }
+
+  .apply-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .job-actions {
+    flex-direction: column;
+  }
+
+  .icon-btn {
+    width: 100%;
+    height: 42px;
+  }
+
+  .related-title {
+    font-size: 16px;
+  }
+
+  .description-content p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
