@@ -21,7 +21,7 @@ export default function JobDetails({ savedJobs = [], toggleSaveJob }) {
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    fetch("https://corsproxy.io/?https://remotive.com/api/remote-jobs")
+    fetch("/api/jobs")
       .then(res => res.json())
       .then(data => {
         const selected = data.jobs.find(j => String(j.id) === String(id));

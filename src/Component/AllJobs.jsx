@@ -20,9 +20,6 @@ export default function AllJobs({
 
     const fetchJobs = async () => {
       try {
-
-
-
         console.log("Error");
         const res = await fetch("/api/jobs");
         console.log("Hello");
