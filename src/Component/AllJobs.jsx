@@ -17,7 +17,7 @@ export default function AllJobs({
   useEffect(() => {
   window.scrollTo(0, 0);
 
-  fetch("https://remotive.com/api/remote-jobs")
+  fetch("/api/jobs")
     .then(res => res.json())
     .then(data => {
       console.log("API Jobs:", data);
