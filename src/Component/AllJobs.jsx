@@ -13,20 +13,36 @@ export default function AllJobs({
 }) {
   const navigate = useNavigate();
   const [apiJobs, setApiJobs] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-  window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
 
-  fetch("/api/jobs")
-    .then(res => res.json())
-    .then(data => {
-      console.log("API Jobs:", data);
-      setApiJobs(data.jobs || []);
-    })
-    .catch(err => {
-      console.error("API Error:", err);
-    });
-}, []);
+    const fetchJobs = async () => {
+      try {
+
+
+
+        console.log("Error");
+        const res = await fetch("/api/jobs");
+        console.log("Hello");
+
+        if (!res.ok) {
+          throw new Error("Failed to fetch jobs");
+        }
+
+        const data = await res.json();
+        setApiJobs(data.jobs || []);
+      } catch (error) {
+        console.error("API Error:", error);
+        setApiJobs([]); // fallback so app does not break
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchJobs();
+  }, []);
 
   const staticJobs = [
     {
@@ -82,6 +98,8 @@ export default function AllJobs({
   return (
     <section className="jobs">
       <h2>All Job Opportunities</h2>
+
+      {loading && <p>Loading jobs...</p>}
 
       <div className="job-grid">
         {jobs.map(job => {
