@@ -82,10 +82,16 @@ export default function App() {
   const [apiJobs, setApiJobs] = useState([]);
 
   useEffect(() => {
-    fetch("https://corsproxy.io/?https://remotive.com/api/remote-jobs")
-      .then((res) => res.json())
+    fetch("/api/jobs")
+      .then((res) => {
+        if (!res.ok) throw new Error(`API returned ${res.status}`);
+        return res.json();
+      })
       .then((data) => setApiJobs(data?.jobs || []))
-      .catch(() => setApiJobs([]));
+      .catch((error) => {
+        console.error("Failed to load API jobs:", error);
+        setApiJobs([]);
+      });
   }, []);
 
   /* ================= STATIC JOBS ================= */
