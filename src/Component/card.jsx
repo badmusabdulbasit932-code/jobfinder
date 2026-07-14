@@ -51,13 +51,13 @@ export default function Card({
 
   if (sortBy === "latest") filteredJobs = [...filteredJobs].reverse();
   if (limit) filteredJobs = filteredJobs.slice(0, limit);
-
   return (
     <section className="jobs">
       <h2>Latest Job Opportunities</h2>
 
       <div className="job-grid">
         {filteredJobs.map((job) => {
+  console.log(job)
           const isSaved =
             isLoggedIn &&
             savedJobs.some((j) => j.id === job.id);
